@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Mikael Jelveby - Resumé</title>
+    <meta name="description" content="Mikael Jelveby &endash; Frontendutvecklare" />
+    <meta name="keywords" content="mikael, jelveby, frontend, utvecklare, developer, html, css, javascript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="./_assets/css/base.css" media="screen, print" />
+
+    <script src="./_assets/js/vendor/modernizr.js"></script>
+    <script src="./_assets/js/vendor/respond.min.js"></script>
+    <script src="./_assets/js/vendor/jquery-1.8.3.min.js"></script>
+    <script src="./_assets/js/vendor/handlebars-1.0.rc.1.js"></script>
+    <script src="./_assets/js/vendor/jquery.fittext.js"></script>
+  </head>
+  <body>
+    <section class="container">
+      <header>
+        <img class="logo" src="./_assets/img/monogram-light-blue.png" alt="Mikael Jelveby" />
+        <h1>Mikael Jelveby</h1>
+        <h2 data-translation="subheader">Om chefen själv får välja</h2>
+
+        <nav class="language">
+          <ul>
+            <li><a href="#swedish" data-lang="sv" class="sv"><img src="./_assets/img/se.png" alt="Swedish" /></a></li>
+            <li><a href="#english" data-lang="en" class="en"><img src="./_assets/img/gb.png" alt="English" /></a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="skills">
+        <h1 data-translation="skills"></h1>
+        <section>
+          <h2 data-translation="skills/technical"></h2>
+          <ul class="technical"></ul>
+        </section>
+        <section>
+          <h2 data-translation="skills/languages"></h2>
+          <ul class="languages"></ul>
+        </section>
+      </section>
+
+      <section class="work">
+        <h1 data-translation="work"></h1>
+        <ul></ul>
+      </section>
+
+      <section class="education">
+        <h1 data-translation="education"></h1>
+        <ul></ul>
+      </section>
+
+      <footer>
+        <span>Mikael Jelveby, Kriebsensgatan 7a, 63220 Eskilstuna</span>
+        <span><a href="tel:+46703151553">0703-151553</a></span>
+        <span><a href="mailto:mikael.jelveby@gmail.com">mikael.jelveby@gmail.com</a></span>
+      </footer>
+    </section>
+
+    <script id="tmpl_skills" type="text/x-handlebars-template">
+      {{#each this}}
+        <li class="{{type}}" data-level="{{levelClass level}}" title="{{levelName level}}">
+          <span>{{lang type}}</span>
+          {{#if extra}}
+            <div class="extra">{{lang extra}}</div>
+          {{/if}}
+        </li>
+      {{/each}}
+    </script>
+
+    <script id="tmpl_education" type="text/x-handlebars-template">
+      {{#each this}}
+        <li class="item">
+          <h2><span>{{begins}}&ndash;{{ends}}</span> {{lang title}} <span>{{location}}</span></h2>
+          <p class="description">{{lang description}}</p>
+        </li>
+      {{/each}}
+    </script>
+
+    <script id="tmpl_work" type="text/x-handlebars-template">
+      {{#each this}}
+        <li class="item">
+          <h2><span>{{begins}}&ndash;{{lang ends}}</span> {{lang position}} <span>{{lang employer}}</span></h2>
+          <p class="description">{{lang description}}</p>
+        </li>
+      {{/each}}
+    </script>
+
+  <script src="./_assets/js/data.js"></script>
+  <script src="./_assets/js/base.js"></script>
+  </body>
+</html>

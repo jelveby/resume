@@ -1,0 +1,280 @@
+/*---------------------------------------------------
+    LESS Elements 0.7
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #2d2e28;
+  color: #dddddd;
+  font: normal 14px/1.6 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+section h1 {
+  font-size: 1.6em;
+}
+h2 {
+  font-size: 1.2em;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  color: #fc7100;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  border-bottom: 2px solid;
+}
+img {
+  border: 0;
+}
+header {
+  margin: 60px auto 80px;
+  width: 80%;
+}
+header .logo {
+  left: 10px;
+  position: absolute;
+  top: 18px;
+}
+header h1 {
+  font-weight: normal;
+  text-shadow: 1px 1px 0 #4b4b4b, 2px 2px 0 #4b4b4b, 4px 4px 8px rgba(0, 0, 0, 0.8);
+  width: 100%;
+}
+header h2 {
+  color: #c4c4c4;
+  float: right;
+  font-weight: bold;
+  margin-right: 2.3em;
+  margin-top: -0.6em;
+  text-align: right;
+  text-shadow: 1px 1px 0 #4b4b4b, 2px 2px 4px rgba(0, 0, 0, 0.8);
+  width: 40%;
+}
+header nav.language {
+  position: absolute;
+  top: 14px;
+  right: 10px;
+}
+header nav.language ul li {
+  display: inline-block;
+}
+header nav.language ul li a {
+  display: inline-block;
+  padding: 4px 8px;
+}
+header nav.language ul li a.selected {
+  border-bottom: 2px solid;
+}
+section.container {
+  border-top: 8px solid #00c6fc;
+  -webkit-box-shadow: inset 0 2px 4px #1d1e1a;
+  -moz-box-shadow: inset 0 2px 4px #1d1e1a;
+  box-shadow: inset 0 2px 4px #1d1e1a;
+  margin: 0 auto;
+}
+.skills,
+.work,
+.education {
+  margin: 0 auto 40px;
+  width: 95%;
+}
+.skills h1,
+.work h1,
+.education h1 {
+  background: #282923;
+  border: 1px solid;
+  border-top: solid 1px #20201c;
+  border-left: solid 1px #20201c;
+  border-right: solid 1px #32332d;
+  border-bottom: solid 1px #32332d;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  padding: 4px 8px;
+}
+.skills {
+  overflow: hidden;
+}
+.skills section {
+  padding: 10px;
+}
+.skills ul li {
+  background: #2a2b26;
+  border: 1px solid;
+  border-top: solid 1px #20201c;
+  border-left: solid 1px #20201c;
+  border-right: solid 1px #32332d;
+  border-bottom: solid 1px #32332d;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  font-size: 16px;
+  margin: 12px 0 0;
+  padding: 2px;
+  position: relative;
+}
+.skills ul li.one span {
+  width: 25%;
+}
+.skills ul li.two span {
+  width: 50%;
+}
+.skills ul li.three span {
+  width: 75%;
+}
+.skills ul li.four span {
+  width: 100%;
+}
+.skills ul li span {
+  background: #b04f00;
+  border: 1px solid;
+  border-top: solid 1px #fc7100;
+  border-left: solid 1px #fc7100;
+  border-right: solid 1px #632c00;
+  border-bottom: solid 1px #632c00;
+  border-bottom-width: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  display: block;
+  padding: 0 4px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  white-space: nowrap;
+  width: 0;
+}
+.skills ul li div.extra {
+  display: none;
+  font-size: 0.9em;
+  padding: 4px 8px;
+}
+.education,
+.work {
+  overflow: hidden;
+}
+.education ul,
+.work ul {
+  padding: 10px;
+}
+.education ul li,
+.work ul li {
+  border-bottom: 1px solid #22231f;
+  -webkit-box-shadow: 0 1px 0 #383931;
+  -moz-box-shadow: 0 1px 0 #383931;
+  box-shadow: 0 1px 0 #383931;
+  margin: 0 2% 10px 0;
+  padding-bottom: 10px;
+  min-height: 80px;
+}
+.education ul li h2 span,
+.work ul li h2 span {
+  font-size: 0.8em;
+  color: #707263;
+}
+.work {
+  overflow: hidden;
+}
+footer {
+  background: #20201c;
+  border-top: 1px solid #32332d;
+  -webkit-box-shadow: inset 0 2px 0px #181815;
+  -moz-box-shadow: inset 0 2px 0px #181815;
+  box-shadow: inset 0 2px 0px #181815;
+  height: 200px;
+  margin-top: 100px;
+  padding: 20px 10%;
+  text-align: center;
+}
+footer span {
+  background: #2a2b26;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  display: inline-block;
+  margin-bottom: 4px;
+  padding: 4px 8px;
+}
+@media screen and (min-width: 480px) {
+  header {
+    width: 60%;
+  }
+  section h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  .skills,
+  .work,
+  .education {
+    width: 80%;
+  }
+  .skills section {
+    float: left;
+    margin-right: 1%;
+    padding: 10px;
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  header {
+    width: 40%;
+  }
+  .education ul li {
+    float: left;
+    width: 48%;
+  }
+}
+.slabtexted .slabtext {
+  display: -moz-inline-box;
+  display: inline-block;
+  white-space: nowrap;
+}
+.slabtextinactive .slabtext {
+  display: inline;
+  white-space: normal;
+  font-size: 1em !important;
+  letter-spacing: inherit !important;
+  word-spacing: inherit !important;
+  *letter-spacing: 0 !important;
+  *word-spacing: 0 !important;
+}
+.slabtextdone .slabtext {
+  display: block;
+  line-height: 0.9;
+}
