@@ -60,7 +60,7 @@ var Resume = function (PAGE, DATA) {
   }
 
   function render_resume () {
-    
+
     render_base();
 
     $('ul.technical').html(templates.skills(RESUME_DATA.skills.technical));
@@ -146,3 +146,39 @@ $(function () {
 
   var resume = new Resume(PAGE, DATA);
 });
+
+
+
+
+
+
+
+
+
+
+
+;(function (sections) {
+
+  var resizeTimeout;
+
+  setMinHeight();
+
+  $(window).on('resize', function () {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function () {
+      setMinHeight();
+    }, 100);
+  });
+
+  function setMinHeight () {
+    var height = window.innerHeight + 'px',
+        s;
+
+    s = document.querySelectorAll(sections);
+
+    for (var i = 0, len = s.length; i < len; i++) {
+      s[i].style.minHeight = height;
+    };
+  }
+
+})('.page');
